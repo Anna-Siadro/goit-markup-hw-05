@@ -464,13 +464,14 @@ a {
 
 .footer-info {
   max-width: 264px;
+  margin-right: 120px;
 }
 
 .footer-social {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin: 0 auto;
+  margin-right: 80px;
 }
 
 .footer-social-list {
@@ -499,12 +500,10 @@ a {
 .footer-conteiner {
   display: flex;
   align-items: baseline;
-  gap: 120px;
-  width: 100%;
 }
 
 .footer-subscribe {
-  margin: 0 auto;
+  margin-left: auto;
 }
 
 .footer-text-form {
@@ -520,13 +519,16 @@ a {
   border: 1px solid #fff;
   border-radius: 4px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+
   margin-right: 24px;
-  max-width: 453px;
+  width: 264px;
+  height: 40px;
+
   background-color: inherit;
   padding: 8px 16px;
-  transition-property: border;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -535,7 +537,7 @@ a {
 
 .form-input-sub:hover,
 .form-input-sub:focus {
-  border: 1px solid #4d5ae5;
+  border-color: 1px solid #31d0aa;
 }
 
 .subscribe-button {
@@ -560,7 +562,7 @@ a {
 .subscribe-button:hover,
 .subscribe-button:focus {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  background-color: #404bbf;
+  background-color: #31d0aa;
 }
 
 .icon-sub {
@@ -596,7 +598,7 @@ input::placeholder {
   pointer-events: none;
 
   transition:
-    opasiti 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -631,16 +633,28 @@ input::placeholder {
   transform: translate(-50%, -50%) scale(1.5);
 }
 
-.form-moda {
+.form-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .form-close {
   position: absolute;
   top: 24px;
   right: 24px;
+
+  width: 24px;
+  height: 24px;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   border-radius: 50%;
   background-color: #e7e9fc;
-  border: 1px solid #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 
   transition:
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -693,17 +707,22 @@ input::placeholder {
   border-radius: 4px;
   padding-left: 38px;
 
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.username-input:hover,
-.username-input:focus {
+.username-input:hover {
   border: 1px solid #4d5ae5;
+}
+
+.username-input:focus {
+  border-color: #4d5ae5;
+  outline: none;
 }
 
 .username-icon {
   position: absolute;
-  top: 8px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 16px;
   fill: #2e2f42;
 
@@ -737,14 +756,19 @@ input::placeholder {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.phone-input:hover,
-.phone-input:focus {
+.phone-input:hover {
   border: 1px solid #4d5ae5;
+}
+
+.phone-input:focus {
+  border-color: #4d5ae5;
+  outline: none;
 }
 
 .phone-icon {
   position: absolute;
-  top: 8px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 16px;
   fill: #2e2f42;
 
@@ -778,14 +802,19 @@ input::placeholder {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.email-input:hover,
-.email-input:focus {
+.email-input:hover {
   border: 1px solid #4d5ae5;
+}
+
+.email-input:focus {
+  border-color: #4d5ae5;
+  outline: none;
 }
 
 .email-icon {
   position: absolute;
-  top: 8px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 16px;
   fill: #2e2f42;
 
@@ -842,6 +871,10 @@ input::placeholder {
 }
 
 .checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
   font-size: 12px;
   line-height: 1.16667;
   letter-spacing: 0.04em;
